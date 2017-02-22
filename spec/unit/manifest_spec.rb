@@ -135,4 +135,28 @@ RSpec.describe Deployment, "#manifest" do
     EOF
   end
 
+  it 'provides simplification for releases' do
+    deployment = Deployment.new.manifest do
+      name 'my-deployment'
+      releases :array do
+        __ do
+          release('my-release', 'latest')
+        end
+        __ do
+          release('other-release', '1.2.3')
+        end
+      end
+    end
+
+    expect(deployment.to_yaml).to eq (<<-EOF).gsub(/^\s{6}/, '')
+      ---
+      name: my-deployment
+      releases:
+      - name: my-release
+        version: latest
+      - name: other-release
+        version: 1.2.3
+    EOF
+  end
+
 end

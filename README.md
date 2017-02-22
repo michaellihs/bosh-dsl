@@ -36,8 +36,7 @@ Deployment.new.manifest do
   director_uuid Helpers::Bosh.director_uuid('bosh-lite')
   releases :array do
     __ do
-      name 'learn-bosh'
-      version 'latest'
+      release('learn-bosh', 'latest')
     end
   end
   jobs :array do

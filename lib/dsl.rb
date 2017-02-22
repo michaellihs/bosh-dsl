@@ -30,6 +30,11 @@ class Deployment
     @yaml_map.to_yaml
   end
 
+  def release(name, version)
+    @curr_yaml_elem['name'] = name
+    @curr_yaml_elem['version'] = version
+  end
+
   private
 
   def yaml(key, args, &block)
