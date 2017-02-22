@@ -1,7 +1,7 @@
 Ruby DSL for BOSH Deployment Manifests
 ======================================
 
-This project aims to provide a simple Ruby DSL to generate BOSH Deployment Manifests.
+This project aims to provide a simple Ruby DSL to generate [BOSH](http://bosh.io) [Deployment Manifests](http://bosh.io/docs/deployment-manifest.html).
 
 
 What does it do?
@@ -60,3 +60,8 @@ Deployment.new.manifest do
   end
 end
 ```
+
+Further Resources
+=================
+
+* [ENAML - (EN)ough with the y(AML) already](https://github.com/enaml-ops/enaml)
