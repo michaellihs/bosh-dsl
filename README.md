@@ -1,4 +1,4 @@
-Ruby DSL for BOSH Deployment Manifests
+Ruby DSL for BOSH Deployment Manifests <img src="https://travis-ci.org/michaellihs/bosh-dsl.svg?branch=master">
 ======================================
 
 This project aims to provide a simple Ruby DSL to generate [BOSH](http://bosh.io) [Deployment Manifests](http://bosh.io/docs/deployment-manifest.html).
